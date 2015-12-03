@@ -11,11 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202153021) do
+ActiveRecord::Schema.define(version: 20151203151616) do
 
   create_table "cookbooks", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "cookbooktitle"
   end
 
   create_table "homes", force: :cascade do |t|
@@ -24,8 +25,16 @@ ActiveRecord::Schema.define(version: 20151202153021) do
   end
 
   create_table "recipes", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "recipetitle"
+    t.string   "summaryofrecipe"
+    t.string   "ingredients"
+    t.string   "makes"
+    t.string   "preparationtime"
+    t.string   "preparation"
+    t.string   "cookingtime"
+    t.string   "notes"
   end
 
   create_table "users", force: :cascade do |t|
