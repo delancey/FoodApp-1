@@ -1,10 +1,14 @@
-class CookbookController < ApplicationController
+class CookbooksController < ApplicationController
 
 	def new
 		@cookbook = Cookbook.new
 	end
 
 	def edit
+		
+	end
+
+	def show
 		
 	end
 

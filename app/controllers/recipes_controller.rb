@@ -1,10 +1,15 @@
-class RecipeController < ApplicationController
+class RecipesController < ApplicationController
 def new
 		@recipe = Recipe.new
 	end
 
 	def edit
+
 	end
+
+  def show
+    
+  end
 
 	def index
 		@recipes = Recipe.all
