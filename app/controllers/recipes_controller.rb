@@ -1,12 +1,15 @@
-class RecipeController < ApplicationController
-
-	def new
-    @recipe = Recipe.new
+class RecipesController < ApplicationController
+def new
+		@recipe = Recipe.new
 	end
 
 	def edit
-	
+
 	end
+
+  def show
+    
+  end
 
 	def index
 		@recipes = Recipe.all
@@ -44,7 +47,6 @@ class RecipeController < ApplicationController
 	private
 
     def recipe_params
-      params.require(:recipe).permit(:recipetitle, :description, :summaryofrecipe, :ingredients, :makes, :preparationtime, :preparation, :cookingtime, :notes)
+      params.require(:recipe).permit(:recipetitle, :summaryofrecipe, :ingredients, :makes, :preparationtime, :preparation, :cookingtime, :notes)
     end
 end
-

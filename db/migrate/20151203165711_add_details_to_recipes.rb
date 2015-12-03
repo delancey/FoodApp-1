@@ -1,4 +1,4 @@
-class AddDetailsToRecipe < ActiveRecord::Migration
+class AddDetailsToRecipes < ActiveRecord::Migration
   def change
     add_column :recipes, :recipetitle, :string
     add_column :recipes, :summaryofrecipe, :string

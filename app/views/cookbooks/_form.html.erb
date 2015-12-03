@@ -4,12 +4,14 @@
       <h2><%= pluralize(@cookbook.errors.count, "error") %> prohibited this cookbook from being saved:</h2>
 
       <ul>
-        <% @cookbook.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
+      <% @cookbook.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
       </ul>
     </div>
   <% end %>
+
+
 <div class="field">
 	<%= f.label :cookbooktitle %>
 	<%= f.text_field :cookbooktitle %>
@@ -19,4 +21,9 @@
 	<%= f.label :description %>
 	<%= f.text_field :description %>
 </div>
+
+<div class="actions">
+  <%= f.submit "Save", class: "btn btn-primary" %>
+</div>
+
 <% end %>
